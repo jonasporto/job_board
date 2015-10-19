@@ -1,0 +1,19 @@
+<%= form_for(Company.new, url: companies_login_path) do |f| %>
+  <% if alert %>
+    <p id="error_explanation">
+      <%=alert%>
+    </p>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Login" %>
+  </div>
+<% end %>

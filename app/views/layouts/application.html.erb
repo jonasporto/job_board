@@ -8,6 +8,12 @@
 </head>
 <body>
 
+<% if current_company %>
+<p> Logged as <%= current_company.name %></p>
+<% else %>
+<p> <%= link_to "New Company", new_company_path %> | <%= link_to "Login", companies_login_path %>
+<% end %>
+<hr />
 <%= yield %>
 
 </body>
