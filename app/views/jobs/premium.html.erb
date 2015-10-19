@@ -1,7 +1,7 @@
 <h1>Premium Jobs</h1>
 
 <%= render @jobs %>
-
+<%= will_paginate @jobs %>
 <br>
 
 <%= link_to 'New Job', new_job_path %>
