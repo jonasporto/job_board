@@ -8,13 +8,32 @@
 </head>
 <body>
 
-<% if current_company %>
-<p> Logged as <%= current_company.name %></p>
-<% else %>
-<p> <%= link_to "New Company", new_company_path %> | <%= link_to "Login", companies_login_path %>
-<% end %>
+<p>
+	<% if current_company %>
+	 Logged as <%= current_company.name %> | 
+	 <%= link_to 'New Job', new_job_path %> |
+	<% else %>
+	 <%= link_to "New Company", new_company_path %> | 
+	 <%= link_to "Login", companies_login_path %> |
+	<% end %>
+	<%= link_to 'Premium jobs', root_path %> |
+	<%= link_to 'Hello World', hello_world_path %>
+
+</p>
 <hr />
+
+<p id="alert"> 
+<%= alert %>
+</p>
+
+<p id="notice"> 
+<%= notice %>
+</p>
+
 <%= yield %>
+
+<br />
+
 
 </body>
 </html>
